@@ -1,4 +1,6 @@
+using API.Context;
 using API.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,10 @@ builder.Services.AddScoped<BarberService>();
 builder.Services.AddScoped<BookingItemService>();
 builder.Services.AddScoped<PasswordService>();
 builder.Services.AddScoped<UserService>();
+
+//// DataContext and SqlServer
+var connectionString = builder.Configuration.GetConnectionString("BadGuyBarbersString");
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
