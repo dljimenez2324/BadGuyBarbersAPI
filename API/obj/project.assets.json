@@ -4463,11 +4463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj",
+      "projectPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj",
       "packagesPath": "C:\\Users\\Ucrda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\obj\\",
+      "outputPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ucrda\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -4543,7 +4543,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

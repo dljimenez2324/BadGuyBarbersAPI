@@ -21,17 +21,27 @@ namespace API.Services
         {
             return _context.UserInfo.SingleOrDefault(user => user.Username == username) !=null;
         }
+
         public bool AddUser(CreateUserAccountDTO UserToAdd)
         {
             bool result = false;
 
-            if(DoesUserExist(UserToAdd.UserName))
+            if(!DoesUserExist(UserToAdd.UserName))
             {
-                UserModel User = new UserModel();
+                UserModel newUser = new UserModel();  // create a new instance of our UserModel
+                var newHashedPassword = HashPassword(UserToAdd.Password);
+                newUser.Id = UserToAdd.Id;  // data is saved to newUser in the form of UserModel
+                newUser.Username = UserToAdd.UserName;
+                newUser.Salt = newHashedPassword.Salt;
+                newUser.Hash = newHashedPassword.Hash;
+
+                _context.Add(newUser);  // data added to database
+                result = _context.SaveChanges() !=0;  // data saved to database as long as its not empty or unchanged
             }
 
             return result;
         }
+
         public PasswordDTO HashPassword(string password)
         {
             // new instance of our passworddto
