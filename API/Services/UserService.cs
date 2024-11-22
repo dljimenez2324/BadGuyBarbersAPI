@@ -84,6 +84,8 @@ namespace API.Services
         {
             return _context.UserInfo.SingleOrDefault(user => user.Username == username);
         }
+
+        // Function to return server status 200 / Ok and a token for login
         public IActionResult Login(LoginDTO user)
         {
             IActionResult Result = Unauthorized();
@@ -104,8 +106,38 @@ namespace API.Services
             return Result;
         }
 
+        // Function to delete a user by using their username
+        public bool DeleteUser(string userToDelete)
+        {
+            UserModel foundUser = GetUserByUserName(userToDelete);  // use our function made above to get our user by username
+            bool result = false;  // we will be returning result and its also initialized to false
+            if (foundUser != null)
+            {
+                foundUser.Username = userToDelete;
+                _context.Remove<UserModel>(foundUser);  // 
+                result = _context.SaveChanges() !=0;  //  data saved to database as long as its not empty or unchanged
+            }
+            return result;
+        }
 
+        // Function to get a user by user Id
+        public UserModel GetUserById(int id)
+        {
+            return _context.UserInfo.SingleOrDefault(user => user.Id == id);
+        }
 
-        
+        // function to update a users info by using their id and username
+        public bool UpdateUser(int id, string username)
+        {
+            UserModel foundUser = GetUserById(id);
+            bool result = false;
+            if(foundUser != null)
+            {
+                foundUser.Username = username;
+                _context.Update<UserModel>(foundUser);
+                result = _context.SaveChanges() !=0;
+            }
+            return result;
+        }
     }
 }
