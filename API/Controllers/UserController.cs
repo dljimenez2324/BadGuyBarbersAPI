@@ -48,7 +48,7 @@ namespace API.Controllers
             return _data.DeleteUser(userToDelete);
         }
 
-        // Update User Account
+        // Update User Accounts Username by giving the id and the username that will be changed to
         [HttpPost("UpdateUser")]
         public bool UpdateUser(int id, string username)
         {
