@@ -1,8 +1,7 @@
 # Bad Guy Barbers API
 Team Members: Tony Fernandez, David Jimenez, Samuel Laguna
 
-11/4/24:  
-* Created a .net webapi with controllers
+Plz see the commit messages for what was done each time.
 
 ------------------------------------------------------------------------------------------------------------------------------------
 Part 3: Backend API Development with C# and EF Core (.NET 8)
