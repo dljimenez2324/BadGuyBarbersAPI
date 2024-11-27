@@ -29,7 +29,7 @@ namespace API.Services
 
         public bool AddUser(CreateUserAccountDTO UserToAdd)
         {
-            bool result = false;   // vairable holds our result and initialized to false
+            bool result = false;   // variable holds our result and initialized to false
 
             if (!DoesUserExist(UserToAdd.UserName))
             {
