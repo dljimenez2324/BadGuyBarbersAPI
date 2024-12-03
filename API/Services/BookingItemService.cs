@@ -28,5 +28,12 @@ namespace API.Services
         {
             return _context.BookingInfo;
         }
+
+        public IEnumerable<BookingItemModel> GetBookingItemsByCategory(string category)
+        {
+            return _context.BookingInfo.Where(item => item.ServiceCategory == category);
+        }
+
+
     }
 }

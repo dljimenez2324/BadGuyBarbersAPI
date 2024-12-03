@@ -32,5 +32,16 @@ namespace API.Controllers
             return _data.GetAllBookingItem();
         }
 
+        // Endpoint - To Get Booking Items By Category (service type?)
+        //// NEED TO CREATE HELPER FUNCTION IN SERVICES FOR THIS
+        [HttpGet("GetBookingItemsByCategory/{Category}")]
+        public IEnumerable<BookingItemModel> GetBookingItemsByCategory( string Category)
+        {
+            return _data.GetBookingItemsByCategory(Category);
+        }
+        
+        // Endpoint - To Get Booking Items
+        // [HttpGet("")]
+
     }
 }
