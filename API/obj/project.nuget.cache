@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oc3nkJx4P3g=",
+  "dgSpecHash": "wWKUjSH7lmM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ucrda\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Ucrda\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

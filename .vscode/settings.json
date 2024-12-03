@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "API\\bin\\Release\\net8.0\\publish",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/e8e10fed-db3d-48e8-a3ac-0e5ea2b195db/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/BadGuyBarberAPIv2"
+}
