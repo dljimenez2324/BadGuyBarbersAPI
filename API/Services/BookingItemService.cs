@@ -34,6 +34,16 @@ namespace API.Services
             return _context.BookingInfo.Where(item => item.ServiceCategory == category);
         }
 
-
+        // public IEnumerable<BookingItemModel> GetBookingItemsByDate(string Date)
+        // {
+        //     return _context.BookingInfo.Where((item) => item.DateTimeTaken)
+        // }
+        public IEnumerable<BookingItemModel> GetBookingItemsByDate(DateTime date)
+        {
+            // Extract just the date part, ignoring time and return items by given date
+            return _context.BookingInfo
+                .Where(item => DateTime.Parse(item.DateTimeTaken).Date == date.Date)
+                .ToList();
+        }
     }
 }
