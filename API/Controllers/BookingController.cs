@@ -65,5 +65,19 @@ namespace API.Controllers
             // Filter bookings for the specific date
             return _data.GetBookingItemsByDate(parsedDate);
         }
+
+        // // Endpoint - To Delete Booking Item
+        // [HttpPost("DeleteBookingItem/{BookingItemToDelete}")]
+        // public bool DeleteBookingItem(BookingItemModel BookingItemDelete)
+        // {
+        //     return _data.DeleteBookingItem(BookingItemDelete);
+        // }
+
+        //// Endpoint - to Truly Delete a Booking Item
+        [HttpPost("DeleteBookingItemById/{BookingToDelete}")]
+        public bool DeleteBookingById(int BookingToDelete)
+        {
+            return _data.DeleteBookingById(BookingToDelete);
+        }
     }
 }

@@ -45,5 +45,31 @@ namespace API.Services
                 .Where(item => DateTime.Parse(item.DateTimeTaken).Date == date.Date)
                 .ToList();
         }
+
+        // public bool DeleteBookingItem(BookingItemModel bookingItemDelete)
+        // {
+        //     _context.Update<BookingItemModel>(bookingItemDelete);
+        //     return _context.SaveChanges() !=0;
+        // }
+
+        //// Helper function to geta booking by id
+        private BookingItemModel GetBookingById(int bookingToDelete)
+        {
+            return _context.BookingInfo.SingleOrDefault(item => item.Id == bookingToDelete);
+        }
+        public bool DeleteBookingById(int bookingToDelete)
+        {
+            // send over our booking id to to find/fetch the booking item
+            BookingItemModel foundBookingItem = GetBookingById(bookingToDelete);
+            bool result = false;
+            if (foundBookingItem !=null)
+            {
+                foundBookingItem.Id = bookingToDelete;
+                _context.Remove<BookingItemModel>(foundBookingItem);
+                result = _context.SaveChanges() !=0;
+            }
+            return result;
+        }
+
     }
 }
