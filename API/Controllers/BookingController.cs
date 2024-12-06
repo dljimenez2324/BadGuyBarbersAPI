@@ -66,6 +66,7 @@ namespace API.Controllers
             return _data.GetBookingItemsByDate(parsedDate);
         }
 
+        // // This is a Psudo Delete , in other words it will do an update
         // // Endpoint - To Delete Booking Item
         // [HttpPost("DeleteBookingItem/{BookingItemToDelete}")]
         // public bool DeleteBookingItem(BookingItemModel BookingItemDelete)

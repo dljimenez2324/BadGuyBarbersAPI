@@ -46,6 +46,7 @@ namespace API.Services
                 .ToList();
         }
 
+        //// This delete is actually an update to render the item "inactive" i assume.
         // public bool DeleteBookingItem(BookingItemModel bookingItemDelete)
         // {
         //     _context.Update<BookingItemModel>(bookingItemDelete);
