@@ -44,7 +44,7 @@ namespace API.Controllers
         // [HttpGet("")]
 
         // Endpoint - To Get Booking Items by Date
-        [HttpGet("GetBookingItemsByDate/Date")]
+        [HttpGet("GetBookingItemsByDate/{Date}")]
         public IEnumerable<BookingItemModel> GetBookingItemsByDate(string Date)
         {
             return _data.GetBookingItemsByDate(Date);
