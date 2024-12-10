@@ -38,12 +38,24 @@ namespace API.Services
         // {
         //     return _context.BookingInfo.Where((item) => item.DateTimeTaken)
         // }
-        public IEnumerable<BookingItemModel> GetBookingItemsByDate(DateTime date)
+        public IEnumerable<BookingItemModel> GetBookingItemsByDate(string date)
         {
             // Extract just the date part, ignoring time and return items by given date
-            return _context.BookingInfo
-                .Where(item => DateTime.Parse(item.DateTimeTaken).Date == date.Date)
-                .ToList();
+            var bookingItems = _context.BookingInfo;
+            List<BookingItemModel> result = new();
+            foreach(BookingItemModel item in bookingItems) 
+            {
+                
+                if (item.DateTimeTaken.Split(' ')[0] == date)
+                {
+                    result.Add(item);
+                }
+
+            }
+            
+            return result;
+                // .Where(item => item.DateTimeTaken.Split(' ')[0] == date)
+                // .ToList();
         }
 
         //// This delete is actually an update to render the item "inactive" i assume.
