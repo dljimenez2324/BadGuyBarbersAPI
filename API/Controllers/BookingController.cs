@@ -50,29 +50,8 @@ namespace API.Controllers
             return _data.GetBookingItemsByDate(Date);
         }
 
-        // // As suggested by Claude instead of the above
-        // // this has an error
-        // [HttpGet("GetBookingItemsByDate/{Date}")]
-        // public IEnumerable<BookingItemModel> GetBookingItemsByDate(string Date)
-        // {
-        //     // Parse the ISO 8601 date string to a DateTime object
-        //     if (!DateTime.TryParse(Date, out DateTime parsedDate))
-        //     {
-        //         // Return empty list or throw an exception if date parsing fails
-        //         return Enumerable.Empty<BookingItemModel>();
-        //     }
+        
 
-        //     // Filter bookings for the specific date
-        //     return _data.GetBookingItemsByDate(parsedDate);
-        // }
-
-        // // This is a Psudo Delete , in other words it will do an update
-        // // Endpoint - To Delete Booking Item
-        // [HttpPost("DeleteBookingItem/{BookingItemToDelete}")]
-        // public bool DeleteBookingItem(BookingItemModel BookingItemDelete)
-        // {
-        //     return _data.DeleteBookingItem(BookingItemDelete);
-        // }
 
         //// Endpoint - to Truly Delete a Booking Item
         [HttpPost("DeleteBookingItemById/{BookingToDelete}")]
@@ -80,5 +59,14 @@ namespace API.Controllers
         {
             return _data.DeleteBookingById(BookingToDelete);
         }
+
+        
+        // // This is a Psudo Delete , in other words it will do an update
+        // // Endpoint - To Delete Booking Item
+        // [HttpPost("DeleteBookingItem/{BookingItemToDelete}")]
+        // public bool DeleteBookingItem(BookingItemModel BookingItemDelete)
+        // {
+        //     return _data.DeleteBookingItem(BookingItemDelete);
+        // }
     }
 }

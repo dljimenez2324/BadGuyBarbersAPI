@@ -34,10 +34,7 @@ namespace API.Services
             return _context.BookingInfo.Where(item => item.ServiceCategory == category);
         }
 
-        // public IEnumerable<BookingItemModel> GetBookingItemsByDate(string Date)
-        // {
-        //     return _context.BookingInfo.Where((item) => item.DateTimeTaken)
-        // }
+        // Service to find booking items by a date string
         public IEnumerable<BookingItemModel> GetBookingItemsByDate(string date)
         {
             // Extract just the date part, ignoring time and return items by given date
@@ -54,18 +51,11 @@ namespace API.Services
             }
             
             return result;
-                // .Where(item => item.DateTimeTaken.Split(' ')[0] == date)
-                // .ToList();
+                
         }
 
-        //// This delete is actually an update to render the item "inactive" i assume.
-        // public bool DeleteBookingItem(BookingItemModel bookingItemDelete)
-        // {
-        //     _context.Update<BookingItemModel>(bookingItemDelete);
-        //     return _context.SaveChanges() !=0;
-        // }
 
-        //// Helper function to geta booking by id
+        //// Helper function to get a booking by id
         private BookingItemModel GetBookingById(int bookingToDelete)
         {
             return _context.BookingInfo.SingleOrDefault(item => item.Id == bookingToDelete);
@@ -84,5 +74,11 @@ namespace API.Services
             return result;
         }
 
+        //// This delete is actually an update to render the item "inactive" i assume.
+        // public bool DeleteBookingItem(BookingItemModel bookingItemDelete)
+        // {
+        //     _context.Update<BookingItemModel>(bookingItemDelete);
+        //     return _context.SaveChanges() !=0;
+        // }
     }
 }
