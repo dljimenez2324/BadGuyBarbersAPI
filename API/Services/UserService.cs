@@ -139,5 +139,17 @@ namespace API.Services
             }
             return result;
         }
+
+        public UserIdDTO GetUserIdDTOByUserName(string username)
+        {
+            var UserInfo = new UserIdDTO();
+            var foundUser = _context.UserInfo.SingleOrDefault(user => user.Username == username);
+            UserInfo.UserId = foundUser.Id;
+            UserInfo.UserName = foundUser.Username;
+
+            return UserInfo;
+        }
+
+        
     }
 }

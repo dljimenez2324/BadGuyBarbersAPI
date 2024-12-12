@@ -34,6 +34,13 @@ namespace API.Controllers
             return _data.GetAllUsers();
         }
 
+        // To Get a single Users userID and userName by username using DTO
+        [HttpGet("GetUserByUserName/{username}")]
+        public UserIdDTO GetUserIdDTOByUserName(string username)
+        {
+            return _data.GetUserIdDTOByUserName(username);
+        }
+
         // Login for User
         [HttpPost("Login")]
         public IActionResult Login([FromBody] LoginDTO User)
