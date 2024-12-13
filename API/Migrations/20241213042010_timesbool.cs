@@ -5,7 +5,7 @@
 namespace API.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class timesbool : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,6 +20,7 @@ namespace API.Migrations
                     BarberName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DaysAvailable = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TimesAvailable = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TimeAvailableBool = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Salt = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Hash = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

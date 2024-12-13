@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241114054227_Initial")]
-    partial class Initial
+    [Migration("20241213042010_timesbool")]
+    partial class timesbool
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,9 @@ namespace API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TimeAvailableBool")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TimesAvailable")

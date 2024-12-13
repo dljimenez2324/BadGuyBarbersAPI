@@ -41,6 +41,9 @@ namespace API.Migrations
                     b.Property<string>("Salt")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TimeAvailableBool")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TimesAvailable")
                         .HasColumnType("nvarchar(max)");
 

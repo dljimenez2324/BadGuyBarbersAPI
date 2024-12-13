@@ -12,6 +12,7 @@ namespace API.Models
         public string? BarberName { get; set; }
         public string? DaysAvailable { get; set; }
         public string? TimesAvailable { get; set; }
+        public bool[]? TimeAvailableBool { get; set; }
         public string? Salt { get; set; }
         public string? Hash { get; set; }
         public BarberModel()
