@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj": {}
+    "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj": {
+    "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\API.csproj",
         "packagesPath": "C:\\Users\\Ucrda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\API\\obj\\",
+        "outputPath": "C:\\Users\\Ucrda\\OneDrive\\CodeStack\\Level5\\BadGuyBarbersAPI\\BadGuyBarbersAPI\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ucrda\\AppData\\Roaming\\NuGet\\NuGet.Config"
