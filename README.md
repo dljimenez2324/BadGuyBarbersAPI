@@ -3,6 +3,9 @@ Team Members: Tony Fernandez, David Jimenez, Samuel Laguna
 
 Plz see the commit messages for what was done each time.
 
+For the Complete Documentation for how to use the Endpoint see the link
+https://docs.google.com/document/d/1Mnog1ixgAZhPT-cIAIN8BbeWeQYpBcP-X9HRWRWeaz8/edit?usp=sharing
+
 ------------------------------------------------------------------------------------------------------------------------------------
 Part 3: Backend API Development with C# and EF Core (.NET 8)
 Objective:
