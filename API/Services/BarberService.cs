@@ -88,6 +88,7 @@ namespace API.Services
             bool result = false;
 
             // Because we already have a user added checking to see if the user exists means we will exit out of the if below and we'll never add barber details so we must not use that for now
+            // We can implement the validation in time
             // if(!DoesUserExist(barberDetailsToAdd.Username))
             // {
             //     BarberModel newBarber = new BarberModel();
