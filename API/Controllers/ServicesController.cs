@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Models;
 using API.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,18 @@ namespace API.Controllers
 
         //  Create endpoints for frontend to get services offered by the Barbers
 
-        // Endpoint - Get All Services by Barbername
+        // Endpoint - To Add Services to a barbers id / username
+        [HttpPost("AddServicesToBarber")]
+        public bool AddServicesToBarber(ServiceItemModel newServiceItem)
+        {
+            return _data.AddServicesToBarber(newServiceItem);
+        }
+
+        // Endpoint - Get All Services
+        [HttpGet("GetAllBarberServices")]
+        public IEnumerable<ServiceItemModel> GetAllBarberServices()
+        {
+            return _data.GetAllBarberServices();
+        }
     }
 }

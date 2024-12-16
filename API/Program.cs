@@ -9,6 +9,7 @@ builder.Services.AddScoped<BarberService>();
 builder.Services.AddScoped<BookingItemService>();
 builder.Services.AddScoped<PasswordService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ServicesItemService>();
 
 //// DataContext and SqlServer
 var connectionString = builder.Configuration.GetConnectionString("BadGuyBarbersString");
